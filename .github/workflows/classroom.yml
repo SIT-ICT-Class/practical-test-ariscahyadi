@@ -19,8 +19,9 @@ jobs:
       with:
         test-name: Config Comparison
         setup-command: ''
-        command: more base-config.txt
-        input: |-
+        command: more
+        input: base-config.txt
+        expected-output: |-
           !
           hostname DSW1
           !
@@ -38,7 +39,6 @@ jobs:
            login local
            transport input ssh
           !
-        expected-output: ''
         comparison-method: contains
         timeout: 10
         max-score: 100
